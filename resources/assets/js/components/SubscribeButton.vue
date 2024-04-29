@@ -1,5 +1,5 @@
 <template>
-    <a href="#" class="ml-2 pl-2 border-l" :class="isActive ? 'font-bold': ''" @click.prevent="subscribe" v-text="isActive ? 'Subscribed' : 'Subscribe'"></a>
+    <a href="#" class="ml-2 pl-2 border-l" :class="isActive ? 'font-bold': ''" @click.prevent="subscribe" v-text="isActive ? 'Abonné' : 'S\'abonner'"></a>
 </template>
 
 <script>
@@ -21,7 +21,7 @@ export default {
             this.isActive = !this.isActive;
 
             if (this.isActive) {
-                flash("Okay, we'll notify you when this thread is updated!");
+                flash("D'accord, nous vous avertirons lorsque ce fil de discussion sera mis à jour !");
             }
         }
     }

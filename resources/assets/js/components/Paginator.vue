@@ -2,13 +2,13 @@
     <ul v-if="shouldPaginate">
         <li v-show="prevUrl" class="inline">
             <a href="#" aria-label="Previous" rel="prev" @click.prevent="page--">
-                <span class="text-xs mr-2" aria-hidden="true">&laquo; Previous</span>
+                <span class="text-xs mr-2" aria-hidden="true">&laquo; Précédent</span>
             </a>
         </li>
 
         <li v-show="nextUrl" class="inline">
             <a href="#" aria-label="Next" rel="next" @click.prevent="page++">
-                <span class="text-xs" aria-hidden="true">Next &raquo;</span>
+                <span class="text-xs" aria-hidden="true">Suivant &raquo;</span>
             </a>
         </li>
     </ul>

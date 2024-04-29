@@ -7,13 +7,13 @@
             </div>
 
             <div class="mb-6">
-                <label for="password" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Password</label>
+                <label for="password" class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Mot de Passe</label>
                 <input type="password" class="w-full p-2 leading-normal" id="password" name="password" autocomplete="current-password" required v-model="form.password">
             </div>
 
             <div class="flex justify-end items-center">
-                <button type="submit" class="btn is-green mr-4" :class="loading ? 'loader' : ''" :disabled="loading">Log In</button>
-                <a href="#" class="text-xs text-grey-dark link" @click="register">or register</a>
+                <button type="submit" class="btn is-green mr-4" :class="loading ? 'loader' : ''" :disabled="loading">Se Connecter</button>
+                <a href="#" class="text-xs text-grey-dark link" @click="register">Où S'Enregistrer</a>
             </div>
 
             <div class="mt-6" v-if="feedback">

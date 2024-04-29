@@ -4,23 +4,23 @@
     <div class="widget border-b-0">
         @if (auth()->check())
             @if(auth()->user()->confirmed)
-                <button class="btn is-green w-full" @click="$modal.show('new-thread')">Add New Thread</button>
+                <button class="btn is-green w-full" @click="$modal.show('new-thread')">Nouvelle discussion</button>
             @else
-                <p class="text-xs text-grey-dark font-bold border border-dashed border-grey-dark p-3">Please confirm your email address to participate.</p>
+                <p class="text-xs text-grey-dark font-bold border border-dashed border-grey-dark p-3">Veuillez confirmer votre email pour participer.</p>
             @endif
         @else
-            <button class="btn is-green w-full tracking-wide" @click="$modal.show('login')">Log In To Post</button>
+            <button class="btn is-green w-full tracking-wide" @click="$modal.show('login')">S'identifier pour poster</button>
         @endif
     </div>
 
     <div class="widget">
-        <h4 class="widget-heading">Browse</h4>
+        <h4 class="widget-heading">Parcourir</h4>
 
         <ul class="mb-2 list-reset text-sm">
             <li class="pb-3">
                 <a href="/threads" class="flex items-center text-grey-darkest hover:text-blue hover:font-bold {{ Request::is('threads') && ! Request::query() ? 'text-blue font-bold' : '' }}">
                     @include ('svgs.icons.all-threads', ['class' => 'mr-3 text-grey'])
-                    All Threads
+                    Toutes les Rubriques
                 </a>
             </li>
 
@@ -33,7 +33,7 @@
                              alt="{{ auth()->user()->username }}"
                              class="w-4 h-4 mr-3 bg-grey text-grey-darkest rounded-full p-1">
 
-                        My Threads
+                        Mes Rubriques
                     </a>
                 </li>
             @endif
@@ -41,21 +41,21 @@
             <li class="pb-3">
                 <a href="/threads?popular=1" class="flex items-center text-grey-darkest hover:text-blue hover:font-bold {{ Request::query('popular') ? 'text-blue font-bold' : '' }}">
                     @include ('svgs.icons.star', ['class' => 'mr-3 text-grey'])
-                    Popular Threads
+                    Rubriques Populaires
                 </a>
             </li>
 
             <li class="pb-3">
                 <a href="/threads?unanswered=1" class="flex items-center text-grey-darkest hover:text-blue hover:font-bold {{ Request::query('unanswered') ? 'text-blue font-bold' : '' }}">
                     @include ('svgs.icons.question', ['class' => 'mr-3 text-grey'])
-                    Unanswered Threads
+                    Fils sans Réponses
                 </a>
             </li>
 
             <li>
                 <a href="/leaderboard" class="flex items-center text-grey-darkest hover:text-blue hover:font-bold {{ request()->getPathInfo() === '/leaderboard' ? 'text-blue font-bold' : '' }}">
                     @include ('svgs.icons.leaderboard')
-                    Leaderboard
+                    Classement
                 </a>
             </li>
 
@@ -65,7 +65,7 @@
 
     @if (count($trending))
         <div class="widget">
-            <h4 class="widget-heading">Trending</h4>
+            <h4 class="widget-heading">Tendance</h4>
 
             <ul class="list-reset">
                 @foreach ($trending as $thread)

@@ -25,7 +25,7 @@
                            @click.prevent="editing = true"
                            class="text-blue text-xs link ml-2 pl-2 border-l"
                         >
-                            Edit
+                            Editer
                         </a>
                     </div>
 
@@ -47,11 +47,11 @@
                             </div>
 
                             <div class="flex justify-between">
-                                <button class="btn bg-red" @click="destroy">Delete</button>
+                                <button class="btn bg-red" @click="destroy">Supprimer</button>
 
                                 <div>
-                                    <button class="btn mr-2" @click="cancel" type="button">Cancel</button>
-                                    <button type="submit" class="btn bg-blue">Update</button>
+                                    <button class="btn mr-2" @click="cancel" type="button">Annuler</button>
+                                    <button type="submit" class="btn bg-blue">Editer</button>
                                 </div>
                             </div>
                         </form>

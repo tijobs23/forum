@@ -1,8 +1,8 @@
 <template>
     <activity-layout>
         <span slot="activity">
-            added a&nbsp;<a class="mr-1 text-blue font-bold" :href="activity.subject.path">reply</a>
-            {{ humanTime(activity.subject.created_at) }} in:
+            a ajtoué une &nbsp;<a class="mr-1 text-blue font-bold" :href="activity.subject.path">réponse</a>
+            {{ humanTime(activity.subject.created_at) }} dans:
         </span>
 
         <div slot="heading" class="text-xl font-semibold my-4">
@@ -22,7 +22,7 @@
             </div>
 
             <div class="flex items-center py-1 text-xs text-grey-darkest">
-                &#8943; <a class="ml-1 text-2xs text-blue" :href="activity.subject.path">more</a>
+                &#8943; <a class="ml-1 text-2xs text-blue" :href="activity.subject.path">plus</a>
             </div>
         </div>
 
@@ -36,13 +36,13 @@
                     </g>
                 </svg>
 
-                <span class="text-grey-darker text-2xs font-semibold  ml-1">{{ activity.subject.favoritesCount }} Favorite(s)</span>
+                <span class="text-grey-darker text-2xs font-semibold  ml-1">{{ activity.subject.favoritesCount }} Favori(s)</span>
             </div>
 
             <!-- Best Answer Badge -->
             <div v-if="activity.subject.isBest" class="text-grey-darker text-2xs font-semibold flex items-center mr-2">
                 <span class="mr-2 font-bold flex items-center">
-                    <span class="ml-2 mr-1">Best Answer!</span>
+                    <span class="ml-2 mr-1">Meilleurs Réponses!</span>
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"
                          class="fill-current text-green">

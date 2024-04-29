@@ -1,19 +1,26 @@
-<nav class="bg-blue-darker py-4">
+<nav class="py-4" style="background-color: #900C3E;">
     <div class="container mx-auto flex justify-between items-center text-blue-lightest pl-6">
         <div>
             <h1 class="font-normal text-2xl">
-                <a href="/" class="text-blue-lightest flex items-center">
+                <a href="/portfolio" class="text-blue-lightest flex items-center">
                     @include ('svgs.logo', ['class' => 'mr-2'])
-                    {{ config('app.name', 'Council') }}
+                    {{ config('app.name', 'Mon Forum') }}
                 </a>
             </h1>
         </div>
 
+        <div>
+            <h1 class="font-normal text-2xl">
+                <a href="/" class="text-blue-lightest flex items-center">
+                    Mon Portfolio
+                </a>
+            </h1>
+        </div>
         <div class="flex" v-cloak>
             <div class="search-wrap rounded-full bg-blue-darkest w-10 cursor-pointer h-10 flex items-center justify-center mr-4 relative" @mouseover="search" @mouseout="searching = false">
                 <form method="GET" action="/threads/search" v-show="searching">
                     <input type="text"
-                           placeholder="Search for something..."
+                           placeholder="Rechercher quelque chose..."
                            name="q"
                            ref="search"
                            class="search-input absolute pin-r pin-t h-full rounded bg-blue-darkest border-none pl-6 pr-10 text-white">
@@ -38,7 +45,7 @@
 
                         <template slot="links">
                             <li class="text-sm pb-3">
-                                <a class="link" href="{{ route('profile', Auth::user()) }}">My Profile</a>
+                                <a class="link" href="{{ route('profile', Auth::user()) }}">Mon Profil</a>
                             </li>
 
                             @if (Auth::user()->isAdmin())
@@ -48,7 +55,7 @@
                             @endif
 
                             <li class="text-sm">
-                                <logout-button route="{{ route('logout') }}" class="link">Logout</logout-button>
+                                <logout-button route="{{ route('logout') }}" class="link">Se Déconnecter</logout-button>
                             </li>
                         </template>
                     </dropdown>

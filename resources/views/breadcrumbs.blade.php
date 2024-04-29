@@ -2,15 +2,15 @@
     <ol class="list-reset flex">
         <li>
             @if (Route::is('threads') && empty(Request::query()))
-                All Threads
+                Toutes les rubriques
             @else
-                <a href="{{ route('threads') }}" class="text-blue font-bold">All Threads</a>
+                <a href="{{ route('threads') }}" class="text-blue font-bold">Toutes les rubriques</a>
             @endif
         </li>
 
         @if (Route::is('search.show'))
             <li><span class="mx-2">&#10095;</span></li>
-            <li>Search</li>
+            <li>Recherche</li>
         @endif
 
         @if (Route::is('channels'))
@@ -20,12 +20,12 @@
 
         @if (request()->has('popular'))
             <li><span class="mx-2">&#10095;</span></li>
-            <li>Popular</li>
+            <li>Populaires</li>
         @endif
 
         @if (request()->has('unanswered'))
             <li><span class="mx-2">&#10095;</span></li>
-            <li>Unanswered</li>
+            <li>Sans Réponses</li>
         @endif
 
         @if (Route::is('threads.show'))

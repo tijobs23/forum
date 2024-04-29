@@ -1,8 +1,8 @@
 <template>
     <activity-layout>
         <span slot="activity">
-            favorited a <a class="text-blue" :href="activity.favoritedModel.path"><strong>reply </strong></a>
-            {{ humanTime(activity.favoritedModel.created_at) }} in:
+            a mis en favori une <a class="text-blue" :href="activity.favoritedModel.path"><strong>réponse </strong></a>
+            {{ humanTime(activity.favoritedModel.created_at) }} dans:
         </span>
 
         <div slot="heading" class="text-xl font-semibold my-4">
@@ -22,7 +22,7 @@
             </div>
 
             <div class="flex items-center py-1 text-xs text-grey-darkest">
-                &#8943; <a class="ml-1 text-2xs text-blue" :href="activity.favoritedModel.path">more</a>
+                &#8943; <a class="ml-1 text-2xs text-blue" :href="activity.favoritedModel.path">plus</a>
             </div>
         </div>
     </activity-layout>

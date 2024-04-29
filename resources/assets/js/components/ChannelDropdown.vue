@@ -6,7 +6,7 @@
            aria-expanded="false"
            @click.prevent="toggle = !toggle"
         >
-            Channels <span class="caret"></span>
+            Canaux <span class="caret"></span>
         </a>
 
         <div class="dropdown-menu channel-dropdown">
@@ -14,7 +14,7 @@
                 <input type="text"
                        class="form-control"
                        v-model="filter"
-                       placeholder="Filter Channels..."/>
+                       placeholder="Filter Canaux..."/>
             </div>
 
             <ul class="list-group channel-list">

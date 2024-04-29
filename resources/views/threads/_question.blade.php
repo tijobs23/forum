@@ -18,13 +18,13 @@
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
 
-                        <button type="submit" class="btn bg-red">Delete Thread</button>
+                        <button type="submit" class="btn bg-red">Supprimer la Rubrique</button>
                     </form>
                 @endcan
 
                 <div>
-                    <button class="btn mr-2" @click="resetForm">Cancel</button>
-                    <button class="btn bg-blue" @click="update">Update</button>
+                    <button class="btn mr-2" @click="resetForm">Annuler</button>
+                    <button class="btn bg-blue" @click="update">Mettre à Jour</button>
                 </div>
             </div>
         </div>
@@ -45,17 +45,17 @@
             <h1 class="text-blue mb-2 text-2xl font-normal -mt-1" v-text="title"></h1>
 
             <p class="text-xs text-grey-darker mb-4">
-                Posted by <a href="{{ route('profile', $thread->creator) }}" class="text-blue link">
+                Posté par <a href="{{ route('profile', $thread->creator) }}" class="text-blue link">
                     {{ $thread->creator->username }} ({{ $thread->creator->reputation }} XP)
                 </a>
 
                 <span v-if="! editing">
                     <span v-if="(authorize('isAdmin') || authorize('owns', thread))">
-                        <a href="#" class="text-blue link pl-2 ml-2 border-l" @click.prevent="editing = true">Edit</a>
+                        <a href="#" class="text-blue link pl-2 ml-2 border-l" @click.prevent="editing = true">Éditer</a>
 
                         <span v-if="authorize('isAdmin')">
-                            <a href="#" class="link pl-2 ml-2 border-l" :class="locked ? 'font-bold' : ''" @click.prevent="toggleLock" v-text="locked ? 'Unlock' : 'Lock'"></a>
-                            <a href="#" class="link pl-2 ml-2 border-l" :class="pinned ? 'font-bold' : ''" @click.prevent="togglePin" v-text="pinned ? 'Unpin' : 'Pin'"></a>
+                            <a href="#" class="link pl-2 ml-2 border-l" :class="locked ? 'font-bold' : ''" @click.prevent="toggleLock" v-text="locked ? 'Unlock' : 'Vérouiller'"></a>
+                            <a href="#" class="link pl-2 ml-2 border-l" :class="pinned ? 'font-bold' : ''" @click.prevent="togglePin" v-text="pinned ? 'Unpin' : 'Épingler'"></a>
                         </span>
                     </span>
 

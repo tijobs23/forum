@@ -39,7 +39,7 @@
                         </a>
                     </li>
 
-                    <li v-if="! notifications.length" class="text-xs">You have zero notifications.</li>
+                    <li v-if="! notifications.length" class="text-xs">Voys avez zero notifications.</li>
                 </ul>
             </div>
         </div>

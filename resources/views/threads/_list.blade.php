@@ -10,7 +10,7 @@
             <h3 class="text-xl font-normal mb-2 tracking-tight">
                 <a href="{{ $thread->path() }}" class="text-blue">
                     @if ($thread->pinned)
-                        Pinned:
+                        Épinglé:
                     @endif
 
                     @if (auth()->check() && $thread->hasUpdatesFor(auth()->user()))
@@ -24,7 +24,7 @@
             </h3>
 
             <p class="text-2xs text-grey-darkest mb-4">
-                Posted By: <a href="{{ route('profile', $thread->creator) }}" class="text-blue">{{ $thread->creator->username }}</a>
+                Posté Par: <a href="{{ route('profile', $thread->creator) }}" class="text-blue">{{ $thread->creator->username }}</a>
             </p>
 
             <thread-view :thread="{{ $thread }}" inline-template class="mb-6 text-grey-darkest leading-loose pr-8">
@@ -40,18 +40,18 @@
 
                 <span class="mr-2 flex items-center text-grey-darker text-2xs font-semibold mr-4">
                     @include ('svgs.icons.eye', ['class' => 'mr-2'])
-                    {{ $thread->visits }} visits
+                    {{ $thread->visits }} visites
                 </span>
 
                 <a href="{{ $thread->path() }}" class="mr-2 flex items-center text-grey-darker text-2xs font-semibold">
                     @include ('svgs.icons.book', ['class' => 'mr-2'])
-                    {{ $thread->replies_count }} {{ str_plural('reply', $thread->replies_count) }}
+                    {{ $thread->replies_count }} {{ str_plural('réponse', $thread->replies_count) }}
                 </a>
 
-                <a class="btn ml-auto is-outlined text-grey-darker py-2 text-xs" href="{{ $thread->path() }}">read more</a>
+                <a class="btn ml-auto is-outlined text-grey-darker py-2 text-xs" href="{{ $thread->path() }}">lire plus</a>
             </div>
         </div>
     </div>
 @empty
-    <p>There are no relevant results at this time.</p>
+    <p>Il n'y a pas de résultats pertinents pour le moment.</p>
 @endforelse

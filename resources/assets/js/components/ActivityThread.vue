@@ -1,8 +1,8 @@
 <template>
     <activity-layout>
         <span slot="activity">
-            added a&nbsp;<a class="mr-1 text-blue" :href="activity.subject.path"><strong>thread</strong></a>
-            {{ humanTime(activity.subject.created_at) }} in:
+            a ajouté une&nbsp;<a class="mr-1 text-blue" :href="activity.subject.path"><strong>rubrique</strong></a>
+            {{ humanTime(activity.subject.created_at) }} dans:
         </span>
 
         <div slot="heading" class="text-xl font-semibold my-4">
@@ -24,7 +24,7 @@
             </div>
 
             <div class="flex items-center py-1 text-xs text-grey-darkest">
-                &#8943; <a class="ml-1 text-2xs text-blue" :href="activity.subject.path">more</a>
+                &#8943; <a class="ml-1 text-2xs text-blue" :href="activity.subject.path">plus</a>
             </div>
         </div>
 
@@ -38,7 +38,7 @@
                     </g>
                 </svg>
 
-                {{ activity.subject.replies_count }} Reply(s)
+                {{ activity.subject.replies_count }} Réponse(s)
             </div>
         </div>
     </activity-layout>

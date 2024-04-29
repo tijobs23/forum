@@ -3,17 +3,17 @@
 @section('administration-content')
     <p class="mb-8">
         <a class="btn bg-blue" href="{{ route('admin.channels.create') }}">
-            New Channel <span class="glyphicon glyphicon-plus"></span>
+            Nouveau Canal <span class="glyphicon glyphicon-plus"></span>
         </a>
     </p>
 
     <table style="border-collapse: collapse">
         <thead class="bg-grey-lightest text-grey-darkest uppercase tracking-wide text-xs">
             <tr>
-                <th class="p-4 border-b" colspan="2">Name</th>
+                <th class="p-4 border-b" colspan="2">Nom</th>
                 <th class="p-4 border-b">Slug</th>
                 <th class="p-4 border-b">Description</th>
-                <th class="p-4 border-b">Threads</th>
+                <th class="p-4 border-b">Rubrique</th>
                 <th class="p-4 border-b">Actions</th>
             </tr>
         </thead>
@@ -29,12 +29,12 @@
                     <td class="text-sm p-4 border-b">{{ $channel->description }}</td>
                     <td class="text-sm p-4 border-b">{{ $channel->threads_count }}</td>
                     <td class="text-sm p-4 border-b">
-                        <a href="{{ route('admin.channels.edit', $channel) }}" class="text-blue link text-sm">Edit</a>
+                        <a href="{{ route('admin.channels.edit', $channel) }}" class="text-blue link text-sm">Editer</a>
                     </td>
                 </tr>
             @empty
                 <tr>
-                    <td>Nothing here.</td>
+                    <td>Rien Ici.</td>
                 </tr>
             @endforelse
         </tbody>

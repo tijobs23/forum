@@ -2,23 +2,23 @@
     <div class="py-6 ml-10">
         <div v-if="! signedIn">
             <p class="text-center text-sm text-grey-dark">
-                Please <a href="/login" @click.prevent="$modal.show('login')" class="text-blue link">sign in</a> to participate in this
-                discussion.
+                Please <a href="/login" @click.prevent="$modal.show('login')" class="text-blue link">se connecter</a> pour participer dans
+                cette discussion.
             </p>
         </div>
 
         <div v-else-if="! confirmed">
-            To participate in this thread, please check your email and confirm your account.
+            Pour participer à ce fil de discussion, veuillez vérifier votre e-mail et confirmer votre compte.
         </div>
 
         <div v-else>
             <div class="mb-3">
-                <wysiwyg name="body" v-model="body" placeholder="Have something to say?"></wysiwyg>
+                <wysiwyg name="body" v-model="body" placeholder="Quelque chose à dire?"></wysiwyg>
             </div>
 
             <button type="submit"
                     class="btn is-green"
-                    @click="addReply">Post</button>
+                    @click="addReply">Poster</button>
         </div>
     </div>
 </template>

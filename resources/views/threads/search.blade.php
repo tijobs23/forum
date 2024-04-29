@@ -12,16 +12,16 @@
         <div class="flex py-6">
             <div class="mr-10">
                 <div class="widget bg-grey-lightest border p-4">
-                    <h4 class="widget-heading">Search</h4>
+                    <h4 class="widget-heading">Recherche</h4>
 
                     <ais-search-box>
-                        <ais-input placeholder="Find a thread..." :autofocus="true" class="w-full"></ais-input>
+                        <ais-input placeholder="Chercher une rubrique..." :autofocus="true" class="w-full"></ais-input>
                     </ais-search-box>
                 </div>
 
                 <div class="widget bg-grey-lightest border p-4">
                     <h4 class="widget-heading">
-                        Filter By Channel
+                        Filtrer Par Canal
                     </h4>
 
                     <div class="panel-body">
