@@ -6,7 +6,7 @@
 /public/js/app.js
 /storage/*.key
 /storage/purify
-/vendor
+/vendors
 /.idea
 Homestead.json
 Homestead.yaml
